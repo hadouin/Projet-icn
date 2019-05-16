@@ -58,9 +58,9 @@ Ball=function(){
   this.vy = (height+width)/450
   this.reb = 0
   this.acc = 0.4
-  //this.r = random(0, 255)
-  //this.g = random(0, 255)
-  //this.b = random(0, 255)
+  this.r = random(0, 255)
+  this.g = random(0, 255)
+  this.b = random(0, 255)
 
 
   this.update = function(){
@@ -76,9 +76,9 @@ Ball=function(){
       this.vy = 5 * sin(angle);
       this.vx = -(this.vx - this.acc);
       son.play();
-      //this.r = random(0, 255)
-      //this.g = random(0, 255)
-      //this.b = random(0, 255)
+      this.r = random(0, 255)
+      this.g = random(0, 255)
+      this.b = random(0, 255)
     }
 
     if ((this.x > playerR.x - this.rayon) &&
@@ -92,6 +92,9 @@ Ball=function(){
       this.vy = 5 * sin(angle);
       this.vx = -(this.vx + this.acc);
       son.play();
+      this.r = random(0, 255)
+      this.g = random(0, 255)
+      this.b = random(0, 255)
     }
 
     if (this.x < -300){ //respawn a gauche
@@ -119,6 +122,7 @@ Ball=function(){
   this.show = function () {
     stroke(57,57,57);
     strokeWeight(width/400);
+    fill(this.r,this.g,this.b);
     ellipse(this.x,this.y,2*this.rayon,2*this.rayon);
   }
 
