@@ -138,6 +138,7 @@ Scorer=function(){
 
   }
   this.show=function(){
+    fill(255,255,255);
     textSize(this.fsize);
     textAlign(CENTER, CENTER);
     textFont(this.font);
@@ -152,6 +153,7 @@ Scorer=function(){
 }
 Ligne=function(){
   this.trait=function(){
+        fill(255,255,255);
     for (var i = 0; i < height; i=i+height/40) {
       rect (width/2-height/80,i,height/(40),height/(40));
       i=i+height/20;
@@ -174,6 +176,7 @@ function setup(){
 function draw(){
   if (a==true){
   background(100);
+  fill(255,255,255);
   text(ball.reb,width/50,height/12)
   playerR.y = constrain(playerR.y, 10,height - 10 - playerR.l)
   ligne.trait();
