@@ -1,0 +1,69 @@
+@font-face{
+  font-family : "forward";
+  src : url("asset/fffforwa-webfont.TTF") format("TTF");
+  src : url("asset/fffforwa-webfont.woff") format("woff"),
+        url("asset/fffforwa-webfont.woff2") format("woff2"),
+        url("asset/fffforwa-webfont.svg") format("svg");
+}
+body{
+  background-color: grey;
+}
+h1{
+  text-shadow: 3px 2px red;
+  text-align: center;
+  color: tomato;
+  font-size: 40px;
+  font-family: "forward";
+  text-decoration: none;
+}
+p{
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "forward";
+  text-decoration: none;
+}
+a.class1:link , a.class1:visited {
+  color: white;
+  position : absolute;
+  right: 50%;
+  box-shadow : 1px 1px black;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  font-family: "forward",serif ;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+a.class1:hover{
+  color:grey;
+  background-color : white;
+  border-color : grey;
+  box-shadow: none;
+  text-shadow: none;
+}
+a.class2:link , a.class2:visited {
+  color : white;
+  position : absolute;
+  left : 50%;
+  margin-left: 16px;
+  box-shadow : 1px 1px black;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  font-family: "forward",serif ;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+a.class2:hover{
+  color : grey;
+  background-color: white;
+  border-color: grey;
+  box-shadow: none;
+  text-shadow: none;
+}
+video{
+  margin-top: 60px;
+  margin-left: 12%
+}
