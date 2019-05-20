@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hadouin/Projet-icn/issues"
   },
-  "homepage": "https://github.com/hadouin/Projet-icn#readme"
+  "homepage": "https://github.com/hadouin/Projet-icn#readme",
+  "dependencies": {
+    "bulma": "^0.7.5"
+  }
 }
