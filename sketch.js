@@ -1,7 +1,6 @@
-var fps;
 var a;
 var son;
-var Player1=function () {
+Player1=function () {
 	this.w = width/120;
 	this.l = height/7;
 	this.y = height/2 - this.l/2;
@@ -24,7 +23,7 @@ var Player1=function () {
 		rect(this.x,this.y,this.w,this.l);
 	};
 };
-var Player2=function (){
+Player2=function (){
 	this.w = width/120;
 	this.l = height/7;
 	this.y = height/2 - this.l/2;
