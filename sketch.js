@@ -164,6 +164,7 @@ function setup(){
   createCanvas(windowWidth-25,windowHeight-30);
   fps=60;
   a=true;
+  foncé=0;
   playerL = new Player1
   playerR = new Player2
   ball = new Ball
@@ -173,8 +174,10 @@ function setup(){
 function draw(){
   if (a == false){
     fill(250,250,250);
-    rect(width/2.7,height/4.2,width/10,height/2.5);
-    rect(width-(width/2.7)-(width/10),height/4.2,width/10,height/2.5);
+    rect(width/2.7,height/6,width/10,height/2.5);
+    rect(width-(width/2.7)-(width/10),height/6,width/10,height/2.5);
+    fill(50,50,50,4);
+    rect(0,0,width,height);
   }
   if (a==true){
   background(100);
