@@ -64,8 +64,8 @@ a.class2:hover{
   text-shadow: none;
 }
 video{
+  position :relative;
   margin-top: 60px;
-  margin-left: 25%;
   margin-right: 0px;
 }
 
