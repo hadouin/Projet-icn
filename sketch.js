@@ -91,7 +91,7 @@ Ball=function(){
       son.play();
       this.r = random(0, 255)
       this.g = random(0, 255)
-      this.b = random(0, 255)      
+      this.b = random(0, 255)
     }
 
     if (this.x < -300){ //respawn a gauche
@@ -171,6 +171,11 @@ function setup(){
   ligne = new Ligne
 }
 function draw(){
+  if (a == false){
+    fill(250,250,250);
+    rect(width/2.7,height/3,width/10,height/3);
+    rect(width-(width/2.7)-(width/10),height/3,width/10,height/3);
+  }
   if (a==true){
   background(100);
   fill(255,255,255);
