@@ -16,7 +16,7 @@ h1{
   font-family: "forward";
   text-decoration: none;
 }
-p{
+p.class1{
   margin-bottom: 20px;
   text-align: center;
   font-family: "forward";
@@ -64,6 +64,9 @@ a.class2:hover{
   text-shadow: none;
 }
 video{
+  position :relative;
   margin-top: 60px;
-  margin-left: 12%
+  margin-right: 0px;
+}
+
 }

@@ -1,4 +1,3 @@
-var fps;
 var a;
 var son;
 Player1=function (){
