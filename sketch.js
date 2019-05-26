@@ -82,47 +82,48 @@ Ball=function(){
     ((playerR.y - this.rayon )< this.y) &&
     (this.y < (playerR.y + playerR.l + this.rayon))) { // rebond rect droite
 
-			this.reb++;
-			diff = this.y - playerR.y;
-			angle = map(diff, 0, playerR.l, radians(225), radians(135));
-			this.vy = 5 * sin(angle);
-			this.vx = -(this.vx + this.acc);
-			son.play();
-			this.r = random(0, 255);
-			this.g = random(0, 255);
-			this.b = random(0, 255);      
-		}
+      this.reb++
+      diff = this.y - playerR.y;
+      angle = map(diff, 0, playerR.l, radians(225), radians(135));
+      this.vy = 5 * sin(angle);
+      this.vx = -(this.vx + this.acc);
+      son.play();
+      this.r = random(0, 255)
+      this.g = random(0, 255)
+      this.b = random(0, 255)
+    }
 
-		if (this.x < -300){ //respawn a gauche
-			this.x= width/2;
-			this.vx = (height+width)/450;
-			this.reb = 0;
-			scorer.scoreR++;
-		}
+    if (this.x < -300){ //respawn a gauche
+      this.x= width/2;
+      this.vx = (height+width)/450;
+      this.reb = 0
+      scorer.scoreR++
+    }
 
-		if (this.x > width + 300){ // respawn a droite
-			this.x= width/2;
-			this.vx = -(height+width)/450;
-			this.reb = 0;
-			scorer.scoreL++;
-		}
+    if (this.x > width + 300){ // respawn a droite
+      this.x= width/2;
+      this.vx = -(height+width)/450;
+      this.reb = 0
+      scorer.scoreL++
+    }
 
-		if (this.y < this.rayon || this.y > height - this.rayon){ // bord haut/bas
-			this.vy = -this.vy;
-		}
+    if (this.y < this.rayon || this.y > height - this.rayon){ // bord haut/bas
+      this.vy = -this.vy;
+    }
 
-		this.x = this.x + this.vx; // avancer
-		this.y = this.y + this.vy; // avancer
-	};
+    this.x = this.x + this.vx; // avancer
+    this.y = this.y + this.vy; // avancer
+  }
 
-	this.show = function () {
-		fill(this.r,this.g,this.b);
-		stroke(57,57,57);
-		strokeWeight(width/400);
-		ellipse(this.x,this.y,2*this.rayon,2*this.rayon);
-	};
+  this.show = function () {
+    fill(this.r,this.g,this.b)
+    stroke(57,57,57);
+    strokeWeight(width/400);
+    ellipse(this.x,this.y,2*this.rayon,2*this.rayon);
+  }
 
-};
+}
+
 Scorer=function(){
 	this.x = height/5;
 	this.y = width/2;
@@ -160,30 +161,39 @@ function preload(){
 	son = loadSound("asset/18782.mp3");
 }
 function setup(){
-	createCanvas(windowWidth-25,windowHeight-30);
-	fps=60;
-	a=true;
-	playerL = new Player1;
-	playerR = new Player2;
-	ball = new Ball;
-	scorer = new Scorer;
-	ligne = new Ligne;
+
+  createCanvas(windowWidth-25,windowHeight-30);
+  fps=60;
+  a=true;
+  foncé=0;
+  playerL = new Player1
+  playerR = new Player2
+  ball = new Ball
+  scorer = new Scorer
+  ligne = new Ligne
 }
 function draw(){
-	if (a==true){
-		background(100);
-		fill(255,255,255);
-		text(ball.reb,width/50,height/12);
-		playerR.y = constrain(playerR.y, 10,height - 10 - playerR.l);
-		ligne.trait();
-		scorer.show();
-		playerL.test();
-		playerL.show();
-		playerR.test();
-		playerR.show();
-		ball.update();
-		ball.show();
-	}
+  if (a == false){
+    fill(250,250,250);
+    rect(width/2.7,height/6,width/10,height/2.5);
+    rect(width-(width/2.7)-(width/10),height/6,width/10,height/2.5);
+    fill(50,50,50,4);
+    rect(0,0,width,height);
+  }
+  if (a==true){
+  background(100);
+  fill(255,255,255);
+  text(ball.reb,width/50,height/12)
+  playerR.y = constrain(playerR.y, 10,height - 10 - playerR.l)
+  ligne.trait();
+  scorer.show();
+  playerL.test();
+  playerL.show();
+  playerR.test();
+  playerR.show();
+  ball.update();
+  ball.show();
+}
 }
 function windowResized(){
 	createCanvas(windowWidth-25,windowHeight-30);
